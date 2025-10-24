@@ -9,8 +9,7 @@ Script untuk meng-install Ookla Speedtest CLI di OpenWrt (aarch64).
 Jalankan perintah berikut di OpenWrt:
 
 ```sh
-wget https://raw.githubusercontent.com/whxxyu/Installer-Speedtest-CLI-Openwrt/refs/heads/main/install.sh -O /tmp/install.sh
-sh /tmp/install.sh
+export WGETRC=/tmp/wgetrc; echo "check_certificate = off" > /tmp/wgetrc; wget "https://raw.githubusercontent.com/whxxyu/Installer-Speedtest-CLI-Openwrt/refs/heads/main/install.sh" -O /tmp/install.sh && sh /tmp/install.sh; rm -f /tmp/wgetrc; unset WGETRC
 ```
 
 ---
